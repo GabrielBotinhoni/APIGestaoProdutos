@@ -40,7 +40,7 @@ namespace APIGestaoProdutos.Controllers
             return NoContent();
         }
 
-        [HttpGet("Filtrados")]
+        [HttpGet("Listar")]
         public async Task<IActionResult> ListarPaginados([FromQuery]ProdutoListarPaginadoModel produtoListar)
         {
             var produtosListados = await _produtoService.ListarRegitrosPaginadosAsync(produtoListar);
