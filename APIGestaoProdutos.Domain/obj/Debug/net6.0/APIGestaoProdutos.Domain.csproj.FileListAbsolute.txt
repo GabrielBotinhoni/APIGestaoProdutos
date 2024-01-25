@@ -1,0 +1,11 @@
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\bin\Debug\net6.0\APIGestaoProdutos.Domain.deps.json
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\bin\Debug\net6.0\APIGestaoProdutos.Domain.dll
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\bin\Debug\net6.0\APIGestaoProdutos.Domain.pdb
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\obj\Debug\net6.0\APIGestaoProdutos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\obj\Debug\net6.0\APIGestaoProdutos.Domain.AssemblyInfoInputs.cache
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\obj\Debug\net6.0\APIGestaoProdutos.Domain.AssemblyInfo.cs
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\obj\Debug\net6.0\APIGestaoProdutos.Domain.csproj.CoreCompileInputs.cache
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\obj\Debug\net6.0\APIGestaoProdutos.Domain.dll
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\obj\Debug\net6.0\refint\APIGestaoProdutos.Domain.dll
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\obj\Debug\net6.0\APIGestaoProdutos.Domain.pdb
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Domain\obj\Debug\net6.0\ref\APIGestaoProdutos.Domain.dll

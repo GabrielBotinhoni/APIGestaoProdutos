@@ -1,0 +1,17 @@
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\bin\Debug\net6.0\APIGestaoProdutos.Infra.deps.json
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\bin\Debug\net6.0\APIGestaoProdutos.Infra.dll
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\bin\Debug\net6.0\APIGestaoProdutos.Infra.pdb
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\bin\Debug\net6.0\APIGestaoProdutos.Domain.dll
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\bin\Debug\net6.0\APIGestaoProdutos.Domain.pdb
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.csproj.AssemblyReference.cache
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.AssemblyInfoInputs.cache
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.AssemblyInfo.cs
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.csproj.CoreCompileInputs.cache
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.csproj.CopyComplete
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.dll
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\refint\APIGestaoProdutos.Infra.dll
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.pdb
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\ref\APIGestaoProdutos.Infra.dll
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\bin\Debug\net6.0\APIGestaoProdutos.Infra.runtimeconfig.json
+D:\Visual Studio\source\APIGestaoProdutos\APIGestaoProdutos.Infra\obj\Debug\net6.0\APIGestaoProdutos.Infra.genruntimeconfig.cache
