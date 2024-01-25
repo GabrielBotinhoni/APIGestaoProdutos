@@ -7,7 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services
-    .AddControllers(option => option.Filters.Add(typeof(FiltroValidacao)));
+    .AddControllers(option => {
+        option.Filters.Add(typeof(FiltroValidacao));
+        option.Filters.Add(typeof(FiltroExcecao));     
+        });
 
 builder.Services.AddFluentValidation(x => x.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly()));
 

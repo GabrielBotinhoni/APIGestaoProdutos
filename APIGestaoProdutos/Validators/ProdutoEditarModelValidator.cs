@@ -9,7 +9,7 @@ public class ProdutoEditarModelValidator: AbstractValidator<ProdutoEditarModel>
         RuleFor(x => x.Codigo).GreaterThan(0).WithMessage("O Código do produto deve ser maior que 0");
         RuleFor(x => x.DtValidade)
             .GreaterThan(x => x.DtFabricacao)
-            .WithMessage("A data de fabriacação do produto deve ser menor que a data de validade.");
+            .WithMessage("A data de fabricação do produto deve ser menor que a data de validade.");
         RuleFor(x => x.CnpjFornecedor).Must((cnpj) =>
         {
             return ValidacaoUtil.ValidaMascaraCNPJ(cnpj);
