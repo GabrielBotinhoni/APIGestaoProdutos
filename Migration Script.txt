@@ -13,20 +13,21 @@ GO
 
 CREATE TABLE [TB_PRODUTO] (
     [CODIGO] int NOT NULL IDENTITY,
-    [DESCRICAO] nvarchar(max) NOT NULL,
+    [DESCRICAO] Varchar(max) NOT NULL,
     [ATIVO] bit NOT NULL,
-    [DT_FABRICACAO] datetime2 NULL,
-    [DT_VALIDADE] datetime2 NULL,
+    [DT_FABRICACAO] Datetime NULL,
+    [DT_VALIDADE] Datetime NULL,
     [CODIGO_FORNECEDOR] int NULL,
-    [DESCRICAO_FORNECEDOR] nvarchar(max) NULL,
-    [CNPJ_FORNECEDOR] nvarchar(max) NULL,
+    [DESCRICAO_FORNECEDOR] Varchar(max) NULL,
+    [CNPJ_FORNECEDOR] Varchar(18) NULL,
     CONSTRAINT [PK_TB_PRODUTO] PRIMARY KEY ([CODIGO])
 );
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20240125173718_CriandoEstruturaTabela', N'6.0.26');
+VALUES (N'20240125230824_CriandoEstruturaTabela', N'6.0.26');
 GO
 
 COMMIT;
 GO
+

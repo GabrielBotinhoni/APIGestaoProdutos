@@ -4,7 +4,7 @@ public class ProdutoListarPaginadoProfile : Profile
 {
     public ProdutoListarPaginadoProfile()
     {
-        CreateMap<ProdutoListarPaginadoModel, ProdutoListarPaginadoEntidade>()
+        CreateMap<ProdutoListarPaginadoModel, ProdutoListarPaginadoDTO>()
             .ForMember(x => x.Codigo, p => p.MapFrom(x => x.Codigo))
             .ForMember(x => x.Ativo, p => p.MapFrom(x => x.Ativo))
             .ForMember(x => x.DtFabricacaoDe, p => p.MapFrom(x => x.DtFabricacaoDe))

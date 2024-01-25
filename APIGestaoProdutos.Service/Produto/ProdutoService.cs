@@ -44,7 +44,7 @@ public class ProdutoService : IProdutoService
 
     public async Task<List<ProdutoDTO>> ListarRegitrosPaginadosAsync(ProdutoListarPaginadoModel model)
     {
-        var produtoListarPaginado = _mapper.Map<ProdutoListarPaginadoEntidade>(model);
+        var produtoListarPaginado = _mapper.Map<ProdutoListarPaginadoDTO>(model);
 
         var produtosPaginados =  await _produtoRepositorio.ListarRegitrosPaginadosAsync(produtoListarPaginado);
 
@@ -54,7 +54,7 @@ public class ProdutoService : IProdutoService
     public async Task<ProdutoDTO> RetornarPorCodigoAsync(int codigo)
     {
         if (codigo <= 0)
-            throw new NotImplementedException();
+            throw new Exception("O Código do produto deve ser maior que 0");
 
         var produtoEntidade = await _produtoRepositorio.RetornarPorCodigoAsync(codigo);
 

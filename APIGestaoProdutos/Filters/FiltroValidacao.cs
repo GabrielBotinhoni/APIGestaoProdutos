@@ -21,7 +21,11 @@ namespace APIGestaoProdutos.Application.Filters
                 context.HttpContext.Response.StatusCode = 400;
 
                 await context.HttpContext.Response.WriteAsJsonAsync(new { Erros = string.Join(" ", mensagens)});
+                await context.HttpContext.Response.CompleteAsync();
             }
+
+            await next();
+
         }
     }
 }

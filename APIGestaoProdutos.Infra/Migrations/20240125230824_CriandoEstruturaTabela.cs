@@ -15,13 +15,13 @@ namespace APIGestaoProdutos.Infra.Migrations
                 {
                     CODIGO = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DESCRICAO = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DESCRICAO = table.Column<string>(type: "Varchar(max)", nullable: false),
                     ATIVO = table.Column<bool>(type: "bit", nullable: false),
-                    DT_FABRICACAO = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DT_VALIDADE = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DT_FABRICACAO = table.Column<DateTime>(type: "Datetime", nullable: true),
+                    DT_VALIDADE = table.Column<DateTime>(type: "Datetime", nullable: true),
                     CODIGO_FORNECEDOR = table.Column<int>(type: "int", nullable: true),
-                    DESCRICAO_FORNECEDOR = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CNPJ_FORNECEDOR = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    DESCRICAO_FORNECEDOR = table.Column<string>(type: "Varchar(max)", nullable: true),
+                    CNPJ_FORNECEDOR = table.Column<string>(type: "Varchar(18)", nullable: true)
                 },
                 constraints: table =>
                 {

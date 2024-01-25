@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
-using Newtonsoft.Json;
-using System.Text.Json.Serialization;
 
 namespace APIGestaoProdutos.Application.Filters
 {

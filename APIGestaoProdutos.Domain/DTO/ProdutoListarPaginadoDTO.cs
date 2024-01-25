@@ -1,4 +1,4 @@
-﻿public class ProdutoListarPaginadoEntidade
+﻿public class ProdutoListarPaginadoDTO
 {
     public int? Codigo { get; set; }
     public bool? Ativo { get; set; }

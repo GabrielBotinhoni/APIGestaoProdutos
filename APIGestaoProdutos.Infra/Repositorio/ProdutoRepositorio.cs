@@ -21,9 +21,9 @@ public class ProdutoRepositorio : IProdutoRepositorio
         return _dbContext.SaveChangesAsync();
     }
 
-    public async Task<List<ProdutoEntidade>> ListarRegitrosPaginadosAsync(ProdutoListarPaginadoEntidade listarProdutos)
+    public async Task<List<ProdutoEntidade>> ListarRegitrosPaginadosAsync(ProdutoListarPaginadoDTO listarProdutos)
     {
-        IQueryable<ProdutoEntidade> dbFiltro = _dbContext.Produtos;
+        IQueryable<ProdutoEntidade> dbFiltro = _dbContext.Produtos.AsNoTracking();
         int paginaAtual = 1;
         int registrosPorPagina = 5;
 
@@ -86,7 +86,7 @@ public class ProdutoRepositorio : IProdutoRepositorio
 
     public async Task<ProdutoEntidade?> RetornarPorCodigoAsync(int codigo)
     {
-        return await _dbContext.Produtos.FirstOrDefaultAsync(x => x.Codigo == codigo);
+        return await _dbContext.Produtos.AsNoTracking().FirstOrDefaultAsync(x => x.Codigo == codigo);
 
     }
 }

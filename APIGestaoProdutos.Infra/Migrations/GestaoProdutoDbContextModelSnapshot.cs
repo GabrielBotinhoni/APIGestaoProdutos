@@ -35,7 +35,7 @@ namespace APIGestaoProdutos.Infra.Migrations
                         .HasColumnName("ATIVO");
 
                     b.Property<string>("CnpjFornecedor")
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("Varchar(18)")
                         .HasColumnName("CNPJ_FORNECEDOR");
 
                     b.Property<int?>("CodigoFornecedor")
@@ -44,19 +44,19 @@ namespace APIGestaoProdutos.Infra.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("Varchar(max)")
                         .HasColumnName("DESCRICAO");
 
                     b.Property<string>("DescricaoFornecedor")
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("Varchar(max)")
                         .HasColumnName("DESCRICAO_FORNECEDOR");
 
                     b.Property<DateTime?>("DtFabricacao")
-                        .HasColumnType("datetime2")
+                        .HasColumnType("Datetime")
                         .HasColumnName("DT_FABRICACAO");
 
                     b.Property<DateTime?>("DtValidade")
-                        .HasColumnType("datetime2")
+                        .HasColumnType("Datetime")
                         .HasColumnName("DT_VALIDADE");
 
                     b.HasKey("Codigo");

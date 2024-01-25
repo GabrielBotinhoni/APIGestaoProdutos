@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
 
 namespace APIGestaoProdutos.Controllers
 {
@@ -24,7 +25,7 @@ namespace APIGestaoProdutos.Controllers
             await _produtoService.EditarAsync(model);
             return NoContent();
         }
-        [HttpGet]
+        [HttpGet("Retornar/{codigo}", Name = "RetornarPorCodigo")]
         public async Task<IActionResult> RetornarPorCodigo(int codigo)
         {
             var produtoDTO = await _produtoService.RetornarPorCodigoAsync(codigo);

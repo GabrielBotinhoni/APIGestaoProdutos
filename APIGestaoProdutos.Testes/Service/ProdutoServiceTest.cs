@@ -30,10 +30,10 @@ namespace APIGestaoProdutos.Testes.Service
             var listaProduto = new List<ProdutoEntidade>();
             listaProduto.Add(produtoEntidade);
 
-            mockIMapper.Setup(x => x.Map<ProdutoListarPaginadoEntidade>(It.Is<ProdutoListarPaginadoModel>(x => x.Ativo == true))).Returns(new ProdutoListarPaginadoEntidade() { Ativo = true });
+            mockIMapper.Setup(x => x.Map<ProdutoListarPaginadoDTO>(It.Is<ProdutoListarPaginadoModel>(x => x.Ativo == true))).Returns(new ProdutoListarPaginadoDTO() { Ativo = true });
 
             mockIProdutoRepositorio.Setup(x => x.RetornarPorCodigoAsync(It.Is<int>(x => x == 1))).ReturnsAsync(produtoEntidade);
-            mockIProdutoRepositorio.Setup(x => x.ListarRegitrosPaginadosAsync(It.Is<ProdutoListarPaginadoEntidade>(x => x.Ativo == true))).ReturnsAsync(listaProduto);
+            mockIProdutoRepositorio.Setup(x => x.ListarRegitrosPaginadosAsync(It.Is<ProdutoListarPaginadoDTO>(x => x.Ativo == true))).ReturnsAsync(listaProduto);
 
             _produtoService = new ProdutoService(mockIProdutoRepositorio.Object, mockIMapper.Object);
         }
