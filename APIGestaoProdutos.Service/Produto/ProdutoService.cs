@@ -32,11 +32,19 @@ public class ProdutoService : IProdutoService
         produtoCadastrado.DescricaoFornecedor = produtoEntidade.DescricaoFornecedor ?? produtoCadastrado.DescricaoFornecedor;
         produtoCadastrado.CnpjFornecedor = produtoEntidade.CnpjFornecedor ?? produtoCadastrado.CnpjFornecedor;
 
+        if(produtoCadastrado.DtFabricacao >= produtoCadastrado.DtValidade)
+        {
+            throw new Exception("A data de fabricação do produto deve ser menor que a data de validade.");
+        }
         await  _produtoRepositorio.EditarAsync(produtoCadastrado);
     }
 
     public Task IncluirAsync(ProdutoIncluirModel model)
     {
+        if (model.DtValidade == null && model.DtFabricacao.HasValue)
+        {
+            throw new Exception("A data de fabricação do produto deve ser menor que a data de validade.");
+        }
         var produtoEntidade = _mapper.Map<ProdutoEntidade>(model);
 
         return _produtoRepositorio.IncluirAsync(produtoEntidade);

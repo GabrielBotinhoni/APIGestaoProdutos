@@ -104,6 +104,25 @@ namespace APIGestaoProdutos.Testes.Service
         }
 
         [Test]
+        public void EditarProdutoDataFabricacaoMaiorQueValidadeCadastradaDeveRetornarErro()
+        {
+            var produtoEditarModel = new ProdutoEditarModel()
+            {
+                Codigo = 1,
+                Descricao = "Espelho",
+                DtFabricacao = DateTime.Now.AddMonths(8),
+                CodigoFornecedor = 1,
+                DescricaoFornecedor = "Fornecedor 2",
+            };
+
+            var ex = Assert.ThrowsAsync<Exception>(() => _produtoService.EditarAsync(produtoEditarModel));
+
+            Assert.NotNull(ex);
+            Assert.That(ex.Message, Is.EqualTo("A data de fabricação do produto deve ser menor que a data de validade."));
+        }
+
+
+        [Test]
         public void EditarProdutoValidoDeveRetornarSucesso()
         {
             var produtoEditarModel = new ProdutoEditarModel()
@@ -121,6 +140,24 @@ namespace APIGestaoProdutos.Testes.Service
         #endregion
 
         #region Incluir
+
+        [Test]
+        public void IncluirProdutoSemValidadeEComFabricacaoDeveRetornarErro()
+        {
+            var produtoIncluirModel = new ProdutoIncluirModel()
+            {
+                Ativo = true,
+                Descricao = "Espelho",
+                DtFabricacao = DateTime.Now.AddMonths(-2),
+                CodigoFornecedor = 1,
+                DescricaoFornecedor = "Fornecedor 2",
+                CnpjFornecedor = "12.123.123/0001-12"
+            };
+
+            var ex = Assert.ThrowsAsync<Exception>(() => _produtoService.IncluirAsync(produtoIncluirModel));
+            Assert.NotNull(ex);
+            Assert.That(ex.Message, Is.EqualTo("A data de fabricação do produto deve ser menor que a data de validade."));
+        }
         [Test]
         public void IncluirProdutoValidoDeveRetornarSucesso()
         {
@@ -154,6 +191,15 @@ namespace APIGestaoProdutos.Testes.Service
 
 
         #region RetornarPorCodigo
+
+        [Test]
+        public void RetornarProdutoComCodigoZeradoDeveRetornarErro()
+        {
+            var ex = Assert.ThrowsAsync<Exception>(() => _produtoService.RetornarPorCodigoAsync(0));
+
+            Assert.NotNull(ex);
+            Assert.That(ex.Message, Is.EqualTo("O Código do produto deve ser maior que 0"));
+        }
         [Test]
         public void RetornarPorCodigoValidoDeveRetornarSucesso()
         {
